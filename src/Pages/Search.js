@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShowSearch = () => {
+const Search = () => {
     return (
         <h1>
         This is Search page
@@ -8,4 +8,4 @@ const ShowSearch = () => {
     )
 }
 
-export default ShowSearch
+export default Search
