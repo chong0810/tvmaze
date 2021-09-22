@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
 import Show from "./Pages/Show";
-import Search from "./Pages/Search";
+import Search from "./Pages/PeopleSearch";
 import NotFound from "./Pages/NotFound";
 
 function App() {
