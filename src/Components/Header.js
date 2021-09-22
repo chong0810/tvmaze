@@ -8,7 +8,7 @@ import {
   Button,
 } from "react-bootstrap";
 
-export class MyNavBar extends React.Component {
+export class Header extends React.Component {
   render() {
     return (
       <Navbar bg="dark" variant="dark">
