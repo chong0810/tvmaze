@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { ShowCard } from "../Components/ShowCard";
 
 class Show extends React.Component {
@@ -38,15 +38,11 @@ class Show extends React.Component {
   };
 
   getShow = (show, index) => {
-    return (
-      
-          <ShowCard details={show}></ShowCard>
-        
-    );
+    return <ShowCard details={show}></ShowCard>;
   };
 
   render() {
-    const { error, isLoaded} = this.state;
+    const { error, isLoaded } = this.state;
 
     if (error) {
       return (
@@ -61,9 +57,25 @@ class Show extends React.Component {
         </Container>
       );
     } else {
-      return <Container>{this.state.shows.map(this.getShow)}</Container>;
-    }
+      return (
+        <Container fluid>
+          <Row className="justify-content-center">
+           <Col xs lg="3"> <h1> Shows You Might Like </h1>
+           </Col>
+          </Row>
 
+          <Row className="justify-content-center">
+            <Col sm={1}></Col>
+            <Col sm={10}>
+              <Row className="justify-content-center">
+                {this.state.shows.slice(0, 25).map(this.getShow)}
+              </Row>
+            </Col>
+            <Col sm={1}></Col>
+          </Row>
+        </Container>
+      );
+    }
   }
 }
 

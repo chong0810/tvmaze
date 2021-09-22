@@ -5,9 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import { Container } from "react-bootstrap";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
-import Show from "./Pages/Show";
 import Search from "./Pages/PeopleSearch";
 import NotFound from "./Pages/NotFound";
+import Show from "./Pages/Show";
 
 function App() {
   return (
