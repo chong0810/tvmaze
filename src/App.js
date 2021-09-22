@@ -7,10 +7,11 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
 import Show from "./Pages/Show";
 import Search from "./Pages/Search";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter forceRefresh>
       <div className="App">
         <Header />
       </div>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" component={Home} exact />
         <Route path="/show" component={Show} />
         <Route path="/search" component={Search} />
+        <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
   );
