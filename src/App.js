@@ -1,19 +1,27 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { MyNavBar } from "./Components/Header";
-import { MovieCard } from "./Components/MovieCard";
+import { Header } from "./Components/Header";
+// import { MovieCard } from "./Components/MovieCard";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
+// import { Container } from "react-bootstrap";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "./Pages/Home";
+import Show from "./Pages/Show";
+import Search from "./Pages/PeopleSearch";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   return (
-    <div className="App">
-      <MyNavBar />
-
-      <Container>
-        <MovieCard />
-      </Container>
-    </div>
+    <BrowserRouter forceRefresh>
+      <div className="App">
+        <Header />
+      </div>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/show" component={Show} />
+        <Route path="/search" component={Search} />
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
