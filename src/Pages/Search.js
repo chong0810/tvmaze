@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Search() {
+const Search = () => {
     return (
-        <div>
-            
-        </div>
+        <h1>
+        This is Search page
+        </h1>
     )
 }
 

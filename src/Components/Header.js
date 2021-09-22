@@ -13,10 +13,10 @@ export class Header extends React.Component {
     return (
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">TVMAZE</Navbar.Brand>
+          <Navbar.Brand href="/">TVMAZE</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#Home">Home</Nav.Link>
-            <Nav.Link href="#Shows">Shows</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/show">Shows</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <FormControl

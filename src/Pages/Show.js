@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Show() {
+const Show = () => {
     return (
-        <div>
-            P
-        </div>
+        <h1>
+        This is show page
+        </h1>
     )
 }
 
