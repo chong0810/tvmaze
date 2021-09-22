@@ -17,6 +17,7 @@ export class Header extends React.Component {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/show">Shows</Nav.Link>
+            <Nav.Link href="/search">Search</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <FormControl
