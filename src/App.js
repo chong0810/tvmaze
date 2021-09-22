@@ -3,12 +3,16 @@ import "./App.css";
 import { MyNavBar } from "./Components/Header";
 import { MovieCard } from "./Components/MovieCard";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
     <div className="App">
       <MyNavBar />
-      <MovieCard />
+
+      <Container>
+        <MovieCard />
+      </Container>
     </div>
   );
 }
