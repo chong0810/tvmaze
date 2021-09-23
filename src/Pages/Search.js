@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
+import {Button} from 'react-bootstrap';
 
-const Search = () => {
-    return (
-        <h1>
-        This is Search page
-        </h1>
-    )
+class Search extends React.Component {
+    constructor() {
+        super();
+    }
+
+    componentDidMount() {
+
+    }
+
+    render() {
+
+        return (
+            <h1></h1>
+        )
+    }
 }
 
-export default Search
+export default Search;

@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const PeopleSearch = () => {
+class PeopleSearch extends React.Component {
+  constructor() {
+    super();
+  }
+  componentDidMount() {}
+
+  render() {
     return (
-        <h1>
-        This is Search page
-        </h1>
-    )
+        <div >
+            
+        </div>
+    );
+  }
 }
-
-export default PeopleSearch
+export default PeopleSearch;

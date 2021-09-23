@@ -22,7 +22,7 @@ export class Header extends React.Component {
           <Form className="d-flex">
             <FormControl
               type="search"
-              placeholder="Search for Shows"
+              placeholder="Search"
               className="mr-2"
               aria-label="Search"
             />
