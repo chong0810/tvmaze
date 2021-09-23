@@ -18,28 +18,16 @@ export class Header extends React.Component {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/show">Shows</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
+            <NavDropdown title="Search" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/search/people">
+                People
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
+              <NavDropdown.Item href="/search/shows">
+                Shows
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Search"
-              className="mr-2"
-              aria-label="Search"
-            />
-            <Button href="/search" variant="outline-success">
-              Search
-            </Button>
-          </Form>
         </Container>
       </Navbar>
     );
