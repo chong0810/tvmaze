@@ -12,19 +12,7 @@ class PeopleSearch extends React.Component {
         <div >
 
             <Container>
-                <Row className = "justify-content-center">
-                    <h1>Search for shows or people</h1>
-                </Row>
-                <Form>
-                <Form.Control type="text" placeholder="Search for shows or people" />
-                </Form>
-                <Button variant="success">
-                    People Search
-                </Button>
-
-                <Button variant="success">
-                    People Search
-                </Button>
+            {console.log(this.props.details)}
 
             </Container>
         </div>
