@@ -6,6 +6,7 @@ import {
   Form,
   FormControl,
   Button,
+  NavDropdown
 } from "react-bootstrap";
 
 export class Header extends React.Component {
@@ -17,7 +18,16 @@ export class Header extends React.Component {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/show">Shows</Nav.Link>
-            <Nav.Link href="/search">Search</Nav.Link>
+            <NavDropdown title="Link" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action5">
+                Something else here
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
           <Form className="d-flex">
             <FormControl
@@ -26,7 +36,9 @@ export class Header extends React.Component {
               className="mr-2"
               aria-label="Search"
             />
-            <Button href="/search" variant="outline-success">Search</Button>
+            <Button href="/search" variant="outline-success">
+              Search
+            </Button>
           </Form>
         </Container>
       </Navbar>

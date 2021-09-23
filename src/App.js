@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
 import NotFound from "./Pages/NotFound";
 import Show from "./Pages/Show";
-import Search from "./Pages/Search";
+import PeopleSearch from "./Pages/PeopleSearch";
 
 function App() {
   return (
@@ -18,9 +18,8 @@ function App() {
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/show" component={Show} />
-        <Route path="/search" component={Search} exact/>
-        <Route path="/search/shows" component={Search} />
-        <Route path="/search/people" component={Search} />
+        <Route path="/search/shows" component={PeopleSearch} />
+        <Route path="/search/people" component={PeopleSearch} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
