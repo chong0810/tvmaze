@@ -12,7 +12,7 @@ class ShowSearch extends React.Component {
         <div >
 
             <Container>
-            {console.log(this.props.details)}
+            <h1>is this working?</h1>
 
             </Container>
         </div>
