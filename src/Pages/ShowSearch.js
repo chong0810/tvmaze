@@ -1,11 +1,22 @@
-import React from 'react'
+import React from "react";
+import {Button, Container, Form, Row } from 'react-bootstrap'
 
-const ShowSearch = () => {
+class ShowSearch extends React.Component {
+  constructor() {
+    super();
+  }
+  componentDidMount() {}
+
+  render() {
     return (
-        <h1>
-        This is Search page
-        </h1>
-    )
-}
+        <div >
 
-export default ShowSearch
+            <Container>
+            <h1>is this working?</h1>
+
+            </Container>
+        </div>
+    );
+  }
+}
+export default ShowSearch;

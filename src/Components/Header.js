@@ -3,9 +3,7 @@ import {
   Nav,
   Navbar,
   Container,
-  Form,
-  FormControl,
-  Button,
+  NavDropdown
 } from "react-bootstrap";
 
 export class Header extends React.Component {
@@ -17,16 +15,16 @@ export class Header extends React.Component {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/show">Shows</Nav.Link>
+            <NavDropdown title="Search" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/search/people">
+                People
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/search/shows">
+                Shows
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
-          <Form className="d-flex">
-            <FormControl
-              type="search"
-              placeholder="Search for Shows"
-              className="mr-2"
-              aria-label="Search"
-            />
-            <Button href="/search" variant="outline-success">Search</Button>
-          </Form>
         </Container>
       </Navbar>
     );
