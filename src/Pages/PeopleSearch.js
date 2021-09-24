@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row} from "react-bootstrap";
 import {PeopleCard} from "../Components/PeopleCard";
 
 class PeopleSearch extends React.Component {
@@ -15,15 +15,14 @@ class PeopleSearch extends React.Component {
   }
 
   componentDidMount() {
-    this.searchPeople();
+    this.searchPeople("");
   }
 
-  searchPeople = () => {
-    fetch("https://api.tvmaze.com/search/people?q=lauren")
+  searchPeople (searchTerm) {
+    fetch("https://api.tvmaze.com/search/people?q="+searchTerm)
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log(result);
           this.setState({
             people: result,
             isLoaded: true,
@@ -37,6 +36,11 @@ class PeopleSearch extends React.Component {
         }
       );
   };
+
+  searchChangeHandler(event) {
+    const searchTerm = event.target.value
+    this.searchPeople(searchTerm)
+  }
 
   getPeople = (people) => {
     return <PeopleCard details = {people}></PeopleCard>
@@ -70,7 +74,7 @@ class PeopleSearch extends React.Component {
                 paddingBottom: 8,
                 paddingLeft: 16,
               }}
-              placeholder="Enter the search term"
+              onChange={this.searchChangeHandler.bind(this)} placeholder="Enter the search term"
             ></input>
             <Row className="justify-content-center">
           {this.state.people.slice(0,5).map(this.getPeople)}
