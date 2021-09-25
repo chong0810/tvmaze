@@ -18,7 +18,7 @@ export class ShowListCard extends React.Component {
       genreArray1.push([info[i]]);
     }
 
-    if (genreArray1[1] != undefined) {
+    if (genreArray1[1] !== undefined) {
       return genreArray1[0] + ", " + genreArray1[1];
     } else {
       return genreArray1[0];
@@ -32,7 +32,7 @@ export class ShowListCard extends React.Component {
       networkArray1.push([info[i]]);
     }
 
-    if (networkArray1[1] != undefined) {
+    if (networkArray1[1] !== undefined) {
       return networkArray1[1];
     }
   }
@@ -65,6 +65,7 @@ export class ShowListCard extends React.Component {
               <Card.Text>
                 {this.getNetwork(this.props.details.show.network)}
               </Card.Text>
+
             </Card.Body>
           </Col>
         </Row>
