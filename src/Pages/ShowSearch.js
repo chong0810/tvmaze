@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row} from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { ShowListCard } from "../Components/ShowListCard";
 
 class ShowSearch extends React.Component {
@@ -7,8 +7,7 @@ class ShowSearch extends React.Component {
     super();
 
     this.state = {
-      show: [
-      ],
+      show: [],
       isLoaded: false,
       error: null,
     };
@@ -18,8 +17,8 @@ class ShowSearch extends React.Component {
     this.searchShow("");
   }
 
-  searchShow (searchTerm) {
-    fetch("https://api.tvmaze.com/search/shows?q="+searchTerm)
+  searchShow(searchTerm) {
+    fetch("https://api.tvmaze.com/search/shows?q=" + searchTerm)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -35,17 +34,17 @@ class ShowSearch extends React.Component {
           });
         }
       );
-  };
+  }
 
   searchChangeHandler(event) {
-    const searchTerm = event.target.value
-    this.searchShow(searchTerm)
+    const searchTerm = event.target.value;
+    this.searchShow(searchTerm);
   }
 
   getShow = (show) => {
-    console.log(show)
-    console.log("Its working")
-    return <ShowListCard details = {show}></ShowListCard>
+    console.log(show);
+    console.log("Its working");
+    return <ShowListCard details={show}></ShowListCard>;
   };
 
   render() {
@@ -65,26 +64,23 @@ class ShowSearch extends React.Component {
       );
     } else {
       return (
-        
-          <Container fluid>
-            <input
-              style={{
-                fonrtsize: 24,
-                display: "block",
-                width: "99%",
-                paddingTop: 8,
-                paddingBottom: 8,
-                paddingLeft: 16,
-              }}
-              onChange={this.searchChangeHandler.bind(this)} placeholder="Enter the search term"
-            ></input>
-            <Row className="justify-content-center">
-          {this.state.show.slice(0,10).map(this.getShow)}
+        <Container fluid>
+          <input
+            style={{
+              fonrtsize: 24,
+              display: "block",
+              width: "99%",
+              paddingTop: 8,
+              paddingBottom: 8,
+              paddingLeft: 16,
+            }}
+            onChange={this.searchChangeHandler.bind(this)}
+            placeholder="Enter the search term"
+          ></input>
+          <Row className="justify-content-center">
+            {this.state.show.slice(0, 10).map(this.getShow)}
           </Row>
-          </Container>
-
-          
-        
+        </Container>
       );
     }
   }
