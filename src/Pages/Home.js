@@ -1,11 +1,12 @@
 import React from "react";
 import Background from "../Asset/background.mp4";
-import { Col, Row } from "react-bootstrap";
+import "../CSS/Home.css"
 
 
 const Home = () => {
     return (
-        <div>
+      <div className="App">
+        <h1 className = "textChange">Welcome to TVMAZE</h1>
       <video
         autoPlay
         loop
@@ -20,23 +21,17 @@ const Home = () => {
           transform: "translate(-50%, -50%)",
           zIndex: "-1",
         }}
-      >
+        >
 
 
         <source src={Background} type="video/mp4" />
 
-
       </video>
-      <Row className="justify-content-center">
-        <h1 style={{
-            zIndex: "1"
-        }}>Welcome to TVMAZE</h1>
-        </Row>
+        
+      </div>
       
               
-          
-      
-    </div>
+        
   );
 };
 
