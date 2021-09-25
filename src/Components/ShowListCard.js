@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
-import "../CSS/imageResize.css";
 
 export class ShowListCard extends React.Component {
   getImageURL(info) {

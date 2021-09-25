@@ -1,14 +1,13 @@
 import React from "react";
-import { Container, Row} from "react-bootstrap";
-import {PeopleCard} from "../Components/PeopleCard";
+import { Container, Row } from "react-bootstrap";
+import { PeopleCard } from "../Components/PeopleCard";
 
 class PeopleSearch extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      people: [
-      ],
+      people: [],
       isLoaded: false,
       error: null,
     };
@@ -18,8 +17,8 @@ class PeopleSearch extends React.Component {
     this.searchPeople("");
   }
 
-  searchPeople (searchTerm) {
-    fetch("https://api.tvmaze.com/search/people?q="+searchTerm)
+  searchPeople(searchTerm) {
+    fetch("https://api.tvmaze.com/search/people?q=" + searchTerm)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -35,15 +34,15 @@ class PeopleSearch extends React.Component {
           });
         }
       );
-  };
+  }
 
   searchChangeHandler(event) {
-    const searchTerm = event.target.value
-    this.searchPeople(searchTerm)
+    const searchTerm = event.target.value;
+    this.searchPeople(searchTerm);
   }
 
   getPeople = (people) => {
-    return <PeopleCard details = {people}></PeopleCard>
+    return <PeopleCard details={people}></PeopleCard>;
   };
 
   render() {
@@ -63,26 +62,23 @@ class PeopleSearch extends React.Component {
       );
     } else {
       return (
-        
-          <Container fluid>
-            <input
-              style={{
-                fonrtsize: 24,
-                display: "block",
-                width: "99%",
-                paddingTop: 8,
-                paddingBottom: 8,
-                paddingLeft: 16,
-              }}
-              onChange={this.searchChangeHandler.bind(this)} placeholder="Enter the search term"
-            ></input>
-            <Row className="justify-content-center">
-          {this.state.people.slice(0,5).map(this.getPeople)}
+        <Container fluid>
+          <input
+            style={{
+              fonrtsize: 24,
+              display: "block",
+              width: "99%",
+              paddingTop: 8,
+              paddingBottom: 8,
+              paddingLeft: 16,
+            }}
+            onChange={this.searchChangeHandler.bind(this)}
+            placeholder="Enter the search term"
+          ></input>
+          <Row className="justify-content-center">
+            {this.state.people.slice(0, 5).map(this.getPeople)}
           </Row>
-          </Container>
-
-          
-        
+        </Container>
       );
     }
   }
