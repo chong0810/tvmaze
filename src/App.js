@@ -16,9 +16,9 @@ function App() {
       </div>
       <Switch>
         <Route path="/" component={Home} exact />
-        <Route path="/show" component={Show} />
-        <Route path="/search/shows" component={ShowSearch} />
-        <Route path="/search/people" component={PeopleSearch} />
+        <Route path="/show" component={Show} exact />
+        <Route path="/search/shows" component={ShowSearch} exact/>
+        <Route path="/search/people" component={PeopleSearch} exact/>
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
