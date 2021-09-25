@@ -65,6 +65,7 @@ export class ShowListCard extends React.Component {
               <Card.Text>
                 {this.getNetwork(this.props.details.show.network)}
               </Card.Text>
+
             </Card.Body>
           </Col>
         </Row>

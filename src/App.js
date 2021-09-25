@@ -1,8 +1,6 @@
 import "./App.css";
 import { Header } from "./Components/Header";
-// import { MovieCard } from "./Components/MovieCard";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { Container } from "react-bootstrap";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
 import NotFound from "./Pages/NotFound";
