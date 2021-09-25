@@ -19,7 +19,7 @@ class ShowSearch extends React.Component {
   }
 
   searchShow (searchTerm) {
-    fetch("https://api.tvmaze.com/search/show?q="+searchTerm)
+    fetch("https://api.tvmaze.com/search/shows?q="+searchTerm)
       .then((res) => res.json())
       .then(
         (result) => {
