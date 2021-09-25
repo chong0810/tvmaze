@@ -1,13 +1,13 @@
 import React from "react";
 import { Container, Row} from "react-bootstrap";
-import {PeopleCard} from "../Components/PeopleCard";
+import { ShowListCard } from "../Components/ShowListCard";
 
 class ShowSearch extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      people: [
+      show: [
       ],
       isLoaded: false,
       error: null,
@@ -24,7 +24,7 @@ class ShowSearch extends React.Component {
       .then(
         (result) => {
           this.setState({
-            people: result,
+            show: result,
             isLoaded: true,
           });
         },
@@ -43,7 +43,9 @@ class ShowSearch extends React.Component {
   }
 
   getShow = (show) => {
-    return <PeopleCard details = {show}></PeopleCard>
+    console.log(show)
+    console.log("Its working")
+    return <ShowListCard details = {show}></ShowListCard>
   };
 
   render() {
@@ -77,7 +79,7 @@ class ShowSearch extends React.Component {
               onChange={this.searchChangeHandler.bind(this)} placeholder="Enter the search term"
             ></input>
             <Row className="justify-content-center">
-          {this.state.people.slice(0,5).map(this.getShow)}
+          {this.state.show.slice(0,10).map(this.getShow)}
           </Row>
           </Container>
 
