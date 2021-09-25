@@ -8,6 +8,7 @@ export class ShowListCard extends React.Component {
     for (var i in info) {
       imageArray1.push([info[i]]);
     }
+
     return imageArray1[0];
   }
 
@@ -54,9 +55,8 @@ export class ShowListCard extends React.Component {
             <Card.Body>
               <Card.Title>
                 <a href={this.props.details.show.url}>
-                  {" "}
                   {this.props.details.show.name}
-                </a>{" "}
+                </a>
               </Card.Title>
               <Card.Text>{this.props.details.show.type}</Card.Text>
               <Card.Text>
@@ -65,7 +65,6 @@ export class ShowListCard extends React.Component {
               <Card.Text>
                 {this.getNetwork(this.props.details.show.network)}
               </Card.Text>
-
             </Card.Body>
           </Col>
         </Row>

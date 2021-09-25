@@ -47,9 +47,8 @@ export class PeopleCard extends React.Component {
             <Card.Body>
               <Card.Title>
                 <a href={this.props.details.person.url}>
-                  {" "}
                   {this.props.details.person.name}
-                </a>{" "}
+                </a>
               </Card.Title>
               <Card.Text>
                 {this.getAge(this.props.details.person.birthday)}

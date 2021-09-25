@@ -1,12 +1,11 @@
 import React from "react";
 import Background from "../Asset/background.mp4";
-import "../CSS/Home.css"
-
+import "../CSS/Home.css";
 
 const Home = () => {
-    return (
-      <div className="App">
-        <h1 className = "textChange">Welcome to TVMAZE</h1>
+  return (
+    <div className="App">
+      <h1 className="textChange">Welcome to TVMAZE</h1>
       <video
         autoPlay
         loop
@@ -21,17 +20,10 @@ const Home = () => {
           transform: "translate(-50%, -50%)",
           zIndex: "-1",
         }}
-        >
-
-
+      >
         <source src={Background} type="video/mp4" />
-
       </video>
-        
-      </div>
-      
-              
-        
+    </div>
   );
 };
 
